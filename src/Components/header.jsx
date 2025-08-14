@@ -2,7 +2,7 @@
 
 function Header(){
     return(
-        <div className="header d-flex justify-content-between  p-2 position-fixed w-100 z-1">
+        <div className="header d-flex justify-content-between  p-2 ">
             {/* Hambuger icon */}
             <div className="hambuger">
                 <button className="">

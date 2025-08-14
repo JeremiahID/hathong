@@ -57,12 +57,30 @@ button{
 
 .prefall{
     height: 100vh;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.13);
 }
 
 .prefall-header{
-    height: 10vh;
-    width: 100%;
-    background-color: blanchedalmond;
+    height: 15vh;
+    background-color: #ffffffa4;
+    /* width: 100%; */
     border: 1px solid #ffffffa4;
+}
+
+.first-section{
+    height: 15vh;
+    width: 15%;
+    background-color: black;
+}
+
+.second-section{
+    height: 15vh;
+    width: 70%;
+    background-color: black;
+}
+
+.Third-section{
+    height: 15vh;
+    width: 15%;
+    background-color: black;
 }
