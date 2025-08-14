@@ -19,7 +19,7 @@ button{
     background-color: transparent;
 }
 
-.d-flex{
+.flex{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,31 +56,58 @@ button{
 /* Prefall styling */
 
 .prefall{
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.13);
+    min-height: 100vh;
+    /* background-color: rgb(0, 0, 0); */
 }
 
 .prefall-header{
     height: 15vh;
-    background-color: #ffffffa4;
-    /* width: 100%; */
-    border: 1px solid #ffffffa4;
 }
 
 .first-section{
     height: 15vh;
     width: 15%;
-    background-color: black;
+    border: 1px solid #3535353b;
+}
+
+.first-section p{
+    color:#353535e5 ;
 }
 
 .second-section{
     height: 15vh;
     width: 70%;
-    background-color: black;
+    border: 1px solid #3535353b;
+}
+
+.prefall-line{
+    color: 3535353b;
+}
+
+.prefall-header-button{
+    width: 10vw;
+    border: 1px solid #3535353b !important;
+
 }
 
 .Third-section{
     height: 15vh;
     width: 15%;
-    background-color: black;
+    border: 1px solid #3535353b;
+
+}
+
+.Third-section p{
+    color:#353535e5 ;
+}
+
+.prefall-dress-wrapper{
+    height: 90vh;
+    /* background-color: coral; */
+}
+
+.prefall-dress{
+    height: 80vh;
+    background-color: rgb(189, 176, 176);
+
 }
