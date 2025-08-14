@@ -1,6 +1,6 @@
 import './css/App.css';
 import Hero from './Components/Hero';
-import Header from './Components/header';
+// import Header from './Components/header';
 
 
 function App() {

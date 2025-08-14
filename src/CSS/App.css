@@ -8,14 +8,39 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+    text-decoration: none !important;
+}
+
+
 .img-fit{
     object-fit: cover;
 }
 
 button{
     border: 0 !important;
+    background-color: transparent;
 }
 
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-icon-size{
+    color:  #ffffffa4;;
+    width: 2.5vw;
+}
+
+.cart-icon-size{
+    color: #ffffffa4;
+    width: 2.5vw;
+}
+
+.logo a{
+    font-size: 1.5rem;
+}
 
 
 /* Hero styling */
