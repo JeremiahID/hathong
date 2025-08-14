@@ -44,8 +44,25 @@ button{
 
 .Hero{
     height: 100vh;
+    width: 100%;
     background-image: url('../Images/Main-page/hero-cover-one.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+
+
+/* Prefall styling */
+
+.prefall{
+    height: 100vh;
+    background-color: black;
+}
+
+.prefall-header{
+    height: 10vh;
+    width: 100%;
+    background-color: blanchedalmond;
+    border: 1px solid #ffffffa4;
 }
