@@ -1,5 +1,4 @@
 
-
 export default function Prefall(){
     return (
         <div className="prefall  ">
@@ -63,7 +62,6 @@ export default function Prefall(){
                                             name.
                                         </p>
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
