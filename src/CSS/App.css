@@ -134,7 +134,11 @@ button{
 }
 
 .prefall-first-dress{
-    background-color: #B8B8B8;
+   background-image: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   transition: background-image 1s ease; 
+   cursor: pointer;
 }
 
 .text-content{

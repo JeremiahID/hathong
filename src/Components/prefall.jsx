@@ -1,4 +1,9 @@
 import { useEffect, useRef } from 'react';
+import prefallFirstCloth from '../Images/Main-page/prefall-first-dress.jpg';
+import prefallFirstClothModel from '../Images/Main-page/prefall-first-dress-model.jpg';
+
+
+
 
 
 export default function Prefall(){
@@ -9,23 +14,23 @@ export default function Prefall(){
         const firstDress = prefallFirstDress.current;
         if (!firstDress) return;
 
-        // Set initial color if not set
-        if (!firstDress.style.backgroundColor) {
-            firstDress.style.backgroundColor = "#B8B8B8";
+        // Set initial image if not set
+        if (!firstDress.style.backgroundImage) {
+            firstDress.style.backgroundImage = `url(${prefallFirstCloth})`;
         }
 
         const handleFirstDress = () => {
-            firstDress.style.backgroundColor = "#1f1919ff";
+            firstDress.style.backgroundImage = `url(${prefallFirstClothModel})`;
         };
 
-        // Set initial color if not set
         const handleMouseOut = () => {
-            firstDress.style.backgroundColor = "#B8B8B8";
+            firstDress.style.backgroundImage = `url(${prefallFirstCloth})`;
         };
 
         firstDress.addEventListener('mouseover', handleFirstDress);
         firstDress.addEventListener('mouseout', handleMouseOut);
 
+        // done to prevent unwanted behavior incase this component is removed from the page.
         return () => {
             firstDress.removeEventListener('mouseover', handleFirstDress);
             firstDress.removeEventListener('mouseout', handleMouseOut);
