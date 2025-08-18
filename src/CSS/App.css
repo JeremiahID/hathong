@@ -120,6 +120,8 @@ button{
     color:#353535e5 ;
 }
 
+
+/* Dress content styling */
 .prefall-dress-wrapper{
     height: 90vh;
     /* background-color: coral; */
@@ -129,6 +131,10 @@ button{
     height: 80vh;
     /* background-color: rgb(189, 176, 176); */
 
+}
+
+.prefall-first-dress{
+    background-color: #B8B8B8;
 }
 
 .text-content{

@@ -6,13 +6,28 @@ export default function Prefall(){
     const prefallFirstDress = useRef(null);
 
     useEffect(() => {
-        const handleDressChange = () => {
-            // const header = headerRef.current;
-            console.log("Test")
+        const firstDress = prefallFirstDress.current;
+        if (!firstDress) return;
+
+        // Set initial color if not set
+        if (!firstDress.style.backgroundColor) {
+            firstDress.style.backgroundColor = "#B8B8B8";
+        }
+
+        const handleFirstDress = () => {
+            firstDress.style.backgroundColor = "#1f1919ff";
         };
-        window.addEventListener('onMouseOver', handleScroll);
+
+        const handleMouseOut = () => {
+            firstDress.style.backgroundColor = "#B8B8B8";
+        };
+
+        firstDress.addEventListener('mouseover', handleFirstDress);
+        firstDress.addEventListener('mouseout', handleMouseOut);
+
         return () => {
-            window.removeEventListener('onMouseOver', handleScroll);
+            firstDress.removeEventListener('mouseover', handleFirstDress);
+            firstDress.removeEventListener('mouseout', handleMouseOut);
         };
     }, []);
 
@@ -48,7 +63,7 @@ export default function Prefall(){
                 <div className="prefall-dress col-12 ">
                     <div className="prefall-dress row">
                         {/* First Dress */}
-                        <div ref={prefallFirstDress} className="prefall-first-dress bg-secondary col-3 ">
+                        <div ref={prefallFirstDress} className="prefall-first-dress col-3 ">
 
                         </div>
 
