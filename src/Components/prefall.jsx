@@ -2,6 +2,22 @@ import { useEffect, useRef } from 'react';
 
 
 export default function Prefall(){
+
+    const prefallFirstDress = useRef(null);
+
+    useEffect(() => {
+        const handleDressChange = () => {
+            // const header = headerRef.current;
+            console.log("Test")
+        };
+        window.addEventListener('onMouseOver', handleScroll);
+        return () => {
+            window.removeEventListener('onMouseOver', handleScroll);
+        };
+    }, []);
+
+
+
     return (
         <div className="prefall  ">
             {/* Prefall Header Jsx */}
@@ -32,7 +48,7 @@ export default function Prefall(){
                 <div className="prefall-dress col-12 ">
                     <div className="prefall-dress row">
                         {/* First Dress */}
-                        <div className="prefall-first-dress bg-secondary col-3 ">
+                        <div ref={prefallFirstDress} className="prefall-first-dress bg-secondary col-3 ">
 
                         </div>
 

@@ -2,8 +2,9 @@
 import { useEffect, useRef } from 'react';
 
 function Header() {
-    const headerRef = useRef(null);
 
+    // This handle the background color of the header during scrollin
+    const headerRef = useRef(null);
     useEffect(() => {
         const handleScroll = () => {
             const scroll = window.scrollY;
@@ -11,10 +12,8 @@ function Header() {
             if (!header) return;
             if (scroll >= 50) {
                 header.classList.add('background-black');
-                console.log("Work");
             } else {
                 header.classList.remove('background-black');
-                console.log("Working");
             }
         };
         window.addEventListener('scroll', handleScroll);
