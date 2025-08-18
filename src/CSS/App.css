@@ -1,4 +1,20 @@
 /* Default styling */
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fffdfd;
+}
+  
+::-webkit-scrollbar-thumb{
+    background: #B8B8B8;
+    border-radius: 10px;
+}
+
+.background-black{
+    background-color: rgba(0, 0, 0, 0.37);
+}
 
 a{
     color: #fff !important;
@@ -54,7 +70,6 @@ button{
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 
 
 /* Prefall styling */
