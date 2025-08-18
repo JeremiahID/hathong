@@ -1,24 +1,28 @@
-// import HeroCoverOne from '../Images/Main-page/hero-cover-one.jpeg'
-import Header from "./header"
+import { useEffect, useRef } from "react";
+import Header from "./header";
+import heroCoverOne from '../Images/Main-page/hero-cover-one.jpeg';
+import heroCoverTwo from '../Images/Main-page/hero-cover-two.jpg';
+import heroCoverThree from '../Images/Main-page/hero-cover-three.jpeg';
 
-export default function Hero(){
-
-    const Hero =  document.querySelector('.Hero');
-    const images = ['../Images/Main-page/hero-cover-one.jpeg', '../Images/Main-page/hero-cover-two.jpeg'];
+export default function Hero() {
+    const heroRef = useRef(null);
+    const images = [heroCoverOne, heroCoverTwo, heroCoverThree];
     let index = 0;
-    function changeBackground(){
-        index = (index + 1) % images.length;
-        Hero.style.backgroundImage = `url(${images[index]})`;
-        Hero.style.backgroundSize = 'cover';
-    }
-    changeBackground();
-    setInterval(changeBackground, 5000);
 
-
+    useEffect(() => {
+        const hero = heroRef.current;
+        if (!hero) return;
+        hero.style.backgroundImage = `url(${images[index]})`;
+        const interval = setInterval(() => {
+            index = (index + 1) % images.length;
+            hero.style.backgroundImage = `url(${images[index]})`;
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
-        <div className="Hero" ref={hero}>
+        <div ref={heroRef} className="Hero">
             <Header />
         </div>
-    )
-};
+    );
+}

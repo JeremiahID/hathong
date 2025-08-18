@@ -69,6 +69,8 @@ button{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+   transition: background-image 1s ease-in-out; 
+
 }
 
 
