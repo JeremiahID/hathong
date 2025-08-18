@@ -18,6 +18,7 @@ export default function Prefall(){
             firstDress.style.backgroundColor = "#1f1919ff";
         };
 
+        // Set initial color if not set
         const handleMouseOut = () => {
             firstDress.style.backgroundColor = "#B8B8B8";
         };
