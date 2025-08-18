@@ -24,7 +24,7 @@ function Header() {
     }, []);
 
     return (
-        <div ref={headerRef} className="header d-flex justify-content-between position-fixed w-100 p-2 ">
+        <div ref={headerRef} className="header d-flex justify-content-between position-fixed w-100 py-2  ">
             {/* Hambuger icon */}
             <div className="hambuger">
                 <button>
