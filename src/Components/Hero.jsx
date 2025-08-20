@@ -4,6 +4,7 @@ import heroCoverOne from '../Images/Main-page/hero-cover-one.jpeg';
 import heroCoverTwo from '../Images/Main-page/hero-cover-two.jpg';
 import heroCoverThree from '../Images/Main-page/hero-cover-three.jpeg';
 
+
 export default function Hero() {
     const heroRef = useRef(null);
     const images = [heroCoverOne, heroCoverTwo, heroCoverThree];
