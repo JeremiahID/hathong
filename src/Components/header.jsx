@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 
 
+
+
 function Header() {
 
     // This handle the background color of the header during scrolling
