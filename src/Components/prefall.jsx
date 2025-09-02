@@ -141,7 +141,7 @@ export default function Prefall(){
                         </div>
                         
                         {/* Third Dress */}
-                        <div className="prefall-third-dress col-3 border border-1 ">
+                        <div ref={prefallThirdDress} className="prefall-third-dress col-3 border border-1 ">
 
                         </div>
 
