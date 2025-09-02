@@ -1,39 +1,101 @@
 import { useEffect, useRef } from 'react';
 import prefallFirstCloth from '../Images/Main-page/prefall-first-dress.jpg';
 import prefallFirstClothModel from '../Images/Main-page/prefall-first-dress-model.jpg';
-
+import prefallSecondCloth from '../Images/Main-page/prefall-second-dress.jpg';
+import prefallSecondClothModel from '../Images/Main-page/prefall-second-dress-model.jpg';
+import prefallThirdtCloth from '../Images/Main-page/prefall-third-dress.jpeg';
+import prefallThirdClothModel from '../Images/Main-page/prefall-third-dress-model.jpeg';
 
 
 
 
 export default function Prefall(){
 
-    const prefallFirstDress = useRef(null);
+    // const prefallFirstDress = useRef(null);
+
+    // useEffect(() => {
+    //     const firstDress = prefallFirstDress.current;
+    //     if (!firstDress) return;
+
+    //     // Set initial image if not set
+    //     if (!firstDress.style.backgroundImage) {
+    //         firstDress.style.backgroundImage = `url(${prefallFirstCloth})`;
+    //     }
+
+    //     const handleFirstDress = () => {
+    //         firstDress.style.backgroundImage = `url(${prefallFirstClothModel})`;
+    //     };
+
+    //     const handleMouseOut = () => {
+    //         firstDress.style.backgroundImage = `url(${prefallFirstCloth})`;
+    //     };
+
+    //     firstDress.addEventListener('mouseover', handleFirstDress);
+    //     firstDress.addEventListener('mouseout', handleMouseOut);
+
+    //     // done to prevent unwanted behavior incase this component is removed from the page.
+    //     return () => {
+    //         firstDress.removeEventListener('mouseover', handleFirstDress);
+    //         firstDress.removeEventListener('mouseout', handleMouseOut);
+    //     };
+    // }, []);
+
+
+    // const prefallSecondDress = useRef(null);
+
+    // useEffect(() => {
+    //     const secondDress = prefallSecondDress.current;
+    //     if (!secondDress) return;
+
+    //     // Set initial image if not set
+    //     if (!secondDress.style.backgroundImage) {
+    //         secondDress.style.backgroundImage = `url(${prefallSecondCloth})`;
+    //     }
+
+    //     const handleFirstDress = () => {
+    //         secondDress.style.backgroundImage = `url(${prefallSecondClothModel})`;
+    //     };
+
+    //     const handleMouseOut = () => {
+    //         secondDress.style.backgroundImage = `url(${prefallSecondCloth})`;
+    //     };
+
+    //     secondDress.addEventListener('mouseover', handleFirstDress);
+    //     secondDress.addEventListener('mouseout', handleMouseOut);
+
+    //     // done to prevent unwanted behavior incase this component is removed from the page.
+    //     return () => {
+    //         secondDress.removeEventListener('mouseover', handleFirstDress);
+    //         secondDress.removeEventListener('mouseout', handleMouseOut);
+    //     };
+    // }, []);
+
+    const prefallThirdDress = useRef(null);
 
     useEffect(() => {
-        const firstDress = prefallFirstDress.current;
-        if (!firstDress) return;
+        const thirdDress = prefallThirdDress.current;
+        if (!thirdDress) return;
 
         // Set initial image if not set
-        if (!firstDress.style.backgroundImage) {
-            firstDress.style.backgroundImage = `url(${prefallFirstCloth})`;
+        if (!thirdDress.style.backgroundImage) {
+            thirdDress.style.backgroundImage = `url(${prefallThirdtCloth})`;
         }
 
         const handleFirstDress = () => {
-            firstDress.style.backgroundImage = `url(${prefallFirstClothModel})`;
+            thirdDress.style.backgroundImage = `url(${prefallThirdClothModel})`;
         };
 
         const handleMouseOut = () => {
-            firstDress.style.backgroundImage = `url(${prefallFirstCloth})`;
+            thirdDress.style.backgroundImage = `url(${prefallThirdtCloth})`;
         };
 
-        firstDress.addEventListener('mouseover', handleFirstDress);
-        firstDress.addEventListener('mouseout', handleMouseOut);
+        thirdDress.addEventListener('mouseover', handleFirstDress);
+        thirdDress.addEventListener('mouseout', handleMouseOut);
 
         // done to prevent unwanted behavior incase this component is removed from the page.
         return () => {
-            firstDress.removeEventListener('mouseover', handleFirstDress);
-            firstDress.removeEventListener('mouseout', handleMouseOut);
+            thirdDress.removeEventListener('mouseover', handleFirstDress);
+            thirdDress.removeEventListener('mouseout', handleMouseOut);
         };
     }, []);
 
@@ -69,17 +131,17 @@ export default function Prefall(){
                 <div className="prefall-dress col-12 ">
                     <div className="prefall-dress row">
                         {/* First Dress */}
-                        <div ref={prefallFirstDress} className="prefall-first-dress col-3 ">
+                        <div  ref={prefallFirstDress}  className="prefall-first-dress col-3 border border-1 ">
 
                         </div>
 
                         {/* Second Dress */}
-                        <div className="prefall-second-dress bg-dark col-3 ">
+                        <div ref={prefallSecondDress} className="prefall-second-dress col-3 border border-1 ">
 
                         </div>
                         
                         {/* Third Dress */}
-                        <div className="prefall-third-dress bg-success col-3 ">
+                        <div className="prefall-third-dress col-3 border border-1 ">
 
                         </div>
 

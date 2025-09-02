@@ -135,7 +135,7 @@ button{
 
 }
 
-.prefall-first-dress{
+.prefall-first-dress,.prefall-second-dress{
    background-image: center;
    background-repeat: no-repeat;
    background-size: cover;
