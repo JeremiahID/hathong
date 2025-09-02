@@ -1,5 +1,6 @@
 import Hero from "../../Components/Hero";
 import Prefall  from "../../Components/prefall";
+import Vision from "../../Components/vision";
 
 
 export default function Home(){
@@ -7,6 +8,7 @@ export default function Home(){
         <div className="home">
             <Hero />
             <Prefall />
+            <Vision />
         </div>
     )
 }
