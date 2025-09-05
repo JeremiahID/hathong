@@ -147,6 +147,17 @@ button{
     height: 80vh;
 }
 
+.button-fav{
+    /* background-color: rgba(0, 0, 0, 0.185) ; */
+    width: 3vw;
+}
+
+.favorite-icon{
+    width: 2vw;
+    color: #F4CEAF;
+    margin: 1rem 0;
+}
+
 
 /* The Vision statement segment */
 .vision{
