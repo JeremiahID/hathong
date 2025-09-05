@@ -147,3 +147,13 @@ button{
     height: 80vh;
 }
 
+
+/* The Vision statement segment */
+.vision{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: #B8B8B8; */
+}
