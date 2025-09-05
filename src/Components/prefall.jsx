@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import prefallFirstCloth from '../Images/Main-page/prefall-first-dress.jpg';
 import prefallFirstClothModel from '../Images/Main-page/prefall-first-dress-model.jpg';
 import prefallSecondCloth from '../Images/Main-page/prefall-second-dress.jpg';
@@ -103,13 +103,12 @@ export default function Prefall(){
 
 
 
-    const [FavoriteIcon, setFavoriteStateIcon] = useState(false)
 
+    const [favoriteIcons, setFavoriteIcons] = useState([false, false, false]);
 
-    function toggleFavorite() {
-        setFavoriteStateIcon(prev => !prev);
-
-    }
+    const toggleFavorite = useCallback((idx) => {
+        setFavoriteIcons(prev => prev.map((fav, i) => i === idx ? !fav : fav));
+    }, []);
 
     return (
         <div className="prefall  ">
@@ -142,9 +141,9 @@ export default function Prefall(){
                     <div className="prefall-dress row">
                         {/* First Dress */}
                         <div  ref={prefallFirstDress}  className="prefall-first-dress col-3 border border-1 ">
-                            <button className='button-fav' onClick={toggleFavorite} >
+                            <button className='button-fav' onClick={() => toggleFavorite(0)} >
                                 <img 
-                                 src={FavoriteIcon ? fillFavorite : favorite}
+                                 src={favoriteIcons[0] ? fillFavorite : favorite}
                                  alt="favorite icon" 
                                  className='favorite-icon' />
                             </button>
@@ -152,9 +151,9 @@ export default function Prefall(){
 
                         {/* Second Dress */}
                         <div ref={prefallSecondDress} className="prefall-second-dress col-3 border border-1 ">
-                            <button className='button-fav' onClick={toggleFavorite} >
+                            <button className='button-fav' onClick={() => toggleFavorite(1)} >
                                 <img 
-                                 src={FavoriteIcon ? fillFavorite : favorite}
+                                 src={favoriteIcons[1] ? fillFavorite : favorite}
                                  alt="favorite icon" 
                                  className='favorite-icon' />
                             </button>
@@ -162,9 +161,9 @@ export default function Prefall(){
                         
                         {/* Third Dress */}
                         <div ref={prefallThirdDress} className="prefall-third-dress col-3 border border-1 ">
-                            <button className='button-fav' onClick={toggleFavorite} >
+                            <button className='button-fav' onClick={() => toggleFavorite(2)} >
                                 <img 
-                                 src={FavoriteIcon ? fillFavorite : favorite}
+                                 src={favoriteIcons[2] ? fillFavorite : favorite}
                                  alt="favorite icon" 
                                  className='favorite-icon' />
                             </button>
