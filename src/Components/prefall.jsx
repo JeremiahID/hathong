@@ -103,10 +103,12 @@ export default function Prefall(){
 
 
 
-    const [FavoriteIcon, setFavoriteStateIcon] = useState(false);
+    const [FavoriteIcon, setFavoriteStateIcon] = useState(false)
+
 
     function toggleFavorite() {
         setFavoriteStateIcon(prev => !prev);
+
     }
 
     return (
@@ -141,33 +143,45 @@ export default function Prefall(){
                         {/* First Dress */}
                         <div  ref={prefallFirstDress}  className="prefall-first-dress col-3 border border-1 ">
                             <button className='button-fav' onClick={toggleFavorite} >
-                                <img
-                                    className='favorite-icon'
-                                    id="favorite-icon"
-                                    src={FavoriteIcon ? fillFavorite : favorite}
-                                    alt="favorite"
-                                />
+                                <img 
+                                 src={FavoriteIcon ? fillFavorite : favorite}
+                                 alt="favorite icon" 
+                                 className='favorite-icon' />
                             </button>
+                        </div>
 
+                        {/* Second Dress */}
+                        <div ref={prefallSecondDress} className="prefall-second-dress col-3 border border-1 ">
+                            <button className='button-fav' onClick={toggleFavorite} >
+                                <img 
+                                 src={FavoriteIcon ? fillFavorite : favorite}
+                                 alt="favorite icon" 
+                                 className='favorite-icon' />
+                            </button>
                         </div>
                         
                         {/* Third Dress */}
                         <div ref={prefallThirdDress} className="prefall-third-dress col-3 border border-1 ">
-
+                            <button className='button-fav' onClick={toggleFavorite} >
+                                <img 
+                                 src={FavoriteIcon ? fillFavorite : favorite}
+                                 alt="favorite icon" 
+                                 className='favorite-icon' />
+                            </button>
                         </div>
 
                         {/* Text Content */}
                         <div className="prefall-text-content  col-3 ">
-                            <div class="text-content row ">
-                                <div class="text-content-one col-12 border flex  flex-column align-items-baseline ">
-                                    <p class=" px-4 fs-8">"she may be the song that summer sings</p>
-                                    <p class=" px-4 fs-8">May be the chill that autumn brings</p>
-                                    <p class=" px-4 fs-8">May be a hundred different things...."</p>
+                            <div className="text-content row ">
+                                <div className="text-content-one col-12 border flex  flex-column align-items-baseline ">
+                                    <p className=" px-4 fs-8">"she may be the song that summer sings</p>
+                                    <p className=" px-4 fs-8">May be the chill that autumn brings</p>
+                                    <p className=" px-4 fs-8">May be a hundred different things...."</p>
                 
                                 </div>
-                                <div class="text-content-two col-12 border flex flex-column">
-                                    <div class="text-content-about">
-                                        <p class="fs-8 text-center">
+                                <div className="text-content-two col-12 border flex flex-column">
+                                    <div className="text-content-about">
+                                        <p className="fs-8 text-center">
                                             "Ha Thong" officially launched in 
                                             December 2019 is a fashion brand
                                             founded by the designer of the same 
