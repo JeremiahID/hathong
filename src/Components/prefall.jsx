@@ -102,6 +102,7 @@ export default function Prefall(){
     }, []);
 
 
+    
     const [favoriteIcons, setFavoriteIcons] = useState([false, false, false]);
 
     const toggleFavorite = useCallback((idx) => {
