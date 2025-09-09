@@ -6,9 +6,7 @@ import prefallSecondClothModel from '../Images/Main-page/prefall-second-dress-mo
 import prefallThirdtCloth from '../Images/Main-page/prefall-third-dress.jpeg';
 import prefallThirdClothModel from '../Images/Main-page/prefall-third-dress-model.jpeg';
 import favorite from '../Utilities/favorite.svg';
-import fillFavorite from '../Utilities/fillfavorite.svg'
-
-
+import fillFavorite from '../Utilities/fillfavorite.svg';
 
 
 export default function Prefall(){
@@ -41,7 +39,6 @@ export default function Prefall(){
             firstDress.removeEventListener('mouseout', handleMouseOut);
         };
     }, []);
-
 
     const prefallSecondDress = useRef(null);
 
@@ -101,8 +98,6 @@ export default function Prefall(){
         };
     }, []);
 
-
-    
     const [favoriteIcons, setFavoriteIcons] = useState([false, false, false]);
 
     const toggleFavorite = useCallback((idx) => {
