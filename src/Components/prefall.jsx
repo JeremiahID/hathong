@@ -8,6 +8,9 @@ import prefallThirdClothModel from '../Images/Main-page/prefall-third-dress-mode
 import favorite from '../Utilities/favorite.svg';
 import fillFavorite from '../Utilities/fillfavorite.svg';
 
+
+
+
 export default function Prefall(){
 
     // prefallFirstDress
